@@ -9,4 +9,11 @@
         <label>Confirm Password</label><br>
         <input type="password" name="confirm_password"><br><br>
         <button type="submit" value="Register">Register</button>
-</form>
+<body>
+    {% if messages %}
+        {% for message in messages %}
+            <p>{{message}}</p>
+        {% endfor %}
+    {% endif %}
+</body>
+    </form>
