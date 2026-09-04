@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | CodeMentor AI</title>
+</head>
+
+<body>
+
+    <h1>CodeMentor AI</h1>
+
+    <h2>Welcome, {{ user.username }}! 👋</h2>
+
+    <p>Understand what AI builds for you.</p>
+
+    <hr>
+
+    <h3>What do you want to do?</h3>
+
+    <a href="{% url 'analyze_code' %}">
+        <button type="button">Analyze Code</button>
+    </a>
+
+    <br><br>
+
+    <a href="{% url 'logout' %}">
+        <button type="button">Logout</button>
+    </a>
+
+</body>
+</html>
