@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .ai_service import explain_code
 
 
 def analyze_code(request):
@@ -11,9 +12,12 @@ def analyze_code(request):
                 'error': 'Please enter some code to analyze.'
             })
 
+        explanation = explain_code(code, language)
+
         return render(request, 'analyze.html', {
             'code': code,
-            'language': language
+            'language': language,
+            'explanation': explanation
         })
 
     return render(request, 'analyze.html')
